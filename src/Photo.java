@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 public class Photo {
+    private float value;
     private int id;
     private int orientation; //0 - Horizontal, 1 - Vertical
 
@@ -13,8 +14,15 @@ public class Photo {
         this.tags = tags;
     }
 
+    public void setValue(float value){
+        this.value = value;
+    }
     public int getId() {
         return id;
+    }
+
+    public float getImportance() {
+        return this.value;
     }
 
     public int getOrientation() {
