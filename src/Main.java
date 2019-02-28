@@ -11,6 +11,9 @@ public class Main {
             e.printStackTrace();
         }
 
+        //Create slideshow from the photos
+        SlideshowCreator.createSlideshow(photos);
+
         System.out.println(photos.toString());
     }
 }
