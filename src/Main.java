@@ -6,7 +6,7 @@ public class Main {
 
         ArrayList<Photo> photos = new ArrayList<Photo>();
         try {
-            photos = InputHelper.readInputs("a_examples.txt");
+            photos = InputHelper.readInputs(".\\a_example.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

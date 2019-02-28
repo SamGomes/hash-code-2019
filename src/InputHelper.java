@@ -10,12 +10,12 @@ public class InputHelper {
         //read input
         ArrayList<Photo> photos = new ArrayList<Photo>();
         try {
-            Scanner inputScanner = new Scanner(new File(filename, filename + ".in"));
+            Scanner inputScanner = new Scanner(new File(filename));
 
 
             int idCounter = 0;
             int numPhotos = inputScanner.nextInt();
-
+            inputScanner.nextLine();
             //build slides
             for (int i = 0; i < numPhotos; i++) {
                 String photoText = inputScanner.nextLine();
