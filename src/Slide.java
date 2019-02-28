@@ -12,4 +12,8 @@ public class Slide {
             allTags.addAll(photo.getTags());
         }
     }
+
+    public ArrayList<Photo> getPhotos() {
+        return photos;
+    }
 }
