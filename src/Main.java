@@ -26,7 +26,6 @@ public class Main {
 
 
             int idCounter = 0;
-
             int numPhotos = inputScanner.nextInt();
 
             //build slides
@@ -47,6 +46,7 @@ public class Main {
         }
 
         return photos;
+
     }
 }
 
