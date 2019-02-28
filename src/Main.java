@@ -13,5 +13,6 @@ public class Main {
 
 
         System.out.println(slideshow.toString());
+        OutputHelper.outputSolution(slideshow);
     }
 }
