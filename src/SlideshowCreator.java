@@ -12,7 +12,7 @@ public class SlideshowCreator {
             }
             photo.setValue(photoTfIdf);
         }
-        photos.sort(Comparator.comparingDouble(o -> o.getImportance()));
+        photos.sort(Comparator.comparingDouble(o -> o.getValue()));
 
         List<Photo> horizontalPhotos = photos.stream().filter(photo -> photo.getOrientation() == 0)
                 .collect(Collectors.toList());

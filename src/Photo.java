@@ -21,7 +21,7 @@ public class Photo {
         return id;
     }
 
-    public float getImportance() {
+    public float getValue() {
         return this.value;
     }
 
