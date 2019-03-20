@@ -2,15 +2,15 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SlideshowCreator {
-    public static Slideshow createSlideshow(ArrayList<Photo> photos, HashMap<String, Float> tfIdf) {
+    public static Slideshow createSlideshow(ArrayList<Photo> photos, HashMap<String, Float> tf) {
 
         ArrayList<Slide> slides = new ArrayList<Slide>();
         for(Photo photo: photos){
-            Float photoTfIdf = 0.0f;
+            Float photoTf = 0.0f;
             for(String tag: photo.getTags()){
-                photoTfIdf+=tfIdf.get(tag);
+                photoTf+=tf.get(tag);
             }
-            photo.setValue(photoTfIdf);
+            photo.setValue(photoTf);
         }
         photos.sort(Comparator.comparingDouble(o -> o.getValue()));
 

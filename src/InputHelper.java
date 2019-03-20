@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 
 public class InputHelper {
-    public static ArrayList<Photo> readInputs(String filename, HashMap<String, Float> tfIdf) throws FileNotFoundException {
+    public static ArrayList<Photo> readInputs(String filename, HashMap<String, Float> tf) throws FileNotFoundException {
 
         //read input
         ArrayList<Photo> photos = new ArrayList<Photo>();
@@ -26,10 +26,10 @@ public class InputHelper {
                 for (int j = 0; j < numTags; j++) {
                     String photoTag = photoAttributes[j + 2];
 
-                    if (!tfIdf.containsKey(photoTag)) {
-                        tfIdf.put(photoTag, 1.0f);
+                    if (!tf.containsKey(photoTag)) {
+                        tf.put(photoTag, 1.0f);
                     }else{
-                        tfIdf.replace(photoTag, tfIdf.get(photoTag)+1);
+                        tf.replace(photoTag, tf.get(photoTag)+1);
                     }
 
                     photoTags.add(photoTag);

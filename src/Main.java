@@ -9,7 +9,6 @@ public class Main {
         Slideshow slideshow;
         HashMap<String, Float> tf = new HashMap<String, Float>();
 
-
         ArrayList<Photo> photos = new ArrayList<Photo>();
         String[] exampleNames = {"a_example","b_lovely_landscapes","c_memorable_moments","d_pet_pictures","e_shiny_selfies"};
         try {
