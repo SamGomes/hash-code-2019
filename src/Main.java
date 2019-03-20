@@ -7,20 +7,25 @@ public class Main {
     public static void main(String[] args) {
 
         Slideshow slideshow;
-        HashMap<String, Float> tfIdf = new HashMap<String, Float>();
+        HashMap<String, Float> tf = new HashMap<String, Float>();
 
 
         ArrayList<Photo> photos = new ArrayList<Photo>();
+        String[] exampleNames = {"a_example","b_lovely_landscapes","c_memorable_moments","d_pet_pictures","e_shiny_selfies"};
         try {
-            photos = InputHelper.readInputs(".\\examples\\a_example.txt", tfIdf);
+            for(String exampleName : exampleNames){
+                photos = InputHelper.readInputs(".\\examples\\"+exampleName+".txt", tf);
+
+                //Create slideshow from the photos
+                slideshow = SlideshowCreator.createSlideshow(photos, tf);
+                OutputHelper.outputSolution(exampleName, slideshow);
+                System.out.println(photos.toString());
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
-        //Create slideshow from the photos
-        slideshow = SlideshowCreator.createSlideshow(photos, tfIdf);
-        OutputHelper.outputSolution(slideshow);
-        System.out.println(photos.toString());
+
     }
 }
 

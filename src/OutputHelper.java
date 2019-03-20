@@ -2,8 +2,8 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
 public class OutputHelper {
-    public static void outputSolution(Slideshow show) {
-        try (PrintWriter out = new PrintWriter("output.txt")) {
+    public static void outputSolution(String fileName, Slideshow show) {
+        try (PrintWriter out = new PrintWriter("outputs//"+fileName+".txt")) {
             out.println(show.getSlides().size());
             for(Slide slide: show.getSlides()){
                 for (Photo photo : slide.getPhotos()) {
